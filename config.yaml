@@ -1,0 +1,39 @@
+general:
+  seed: 42
+  rounds: 20
+  fraction_fit: 0.3
+  local_epochs: 3
+  batch_size: 32
+  num_clients: 10
+  device: "cuda"  # cuda or cpu
+
+datasets:
+  mnist:
+    enabled: true
+    num_classes: 10
+  cifar10:
+    enabled: false
+    num_classes: 10
+
+heterogeneity:
+  alpha: 0.1  # Dirichlet концентрация (меньше = больше гетерогенность)
+
+fedavg:
+  enabled: true
+
+fedprox:
+  enabled: true
+  mu: 0.01  # проксимальный параметр
+
+adaptive_fedprox:
+  enabled: true
+  mu0: 0.1  # начальный mu
+  decay_strategy: "linear"  # linear, exp, gradient_based
+  min_mu: 0.001
+
+experiments:
+  compare_methods: true
+  heterogeneity_analysis: true
+  alpha_values: [10.0, 1.0, 0.5, 0.1]
+  scale_analysis: true
+  client_counts: [10, 20, 50, 100]
