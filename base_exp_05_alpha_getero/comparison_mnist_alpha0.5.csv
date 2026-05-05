@@ -1,0 +1,4 @@
+experiment_name,total_rounds,final_accuracy,final_loss,best_accuracy,best_accuracy_round,rounds_to_70,rounds_to_75,rounds_to_80,rounds_to_85,rounds_to_90
+fedavg_mnist_alpha0.5_clients10,51,0.9922,0.02714552331815035,0.9932,43,1,1,1,1,1
+fedprox_mnist_alpha0.5_clients10,51,0.9912,0.027607054791050904,0.9915,45,1,1,1,1,2
+adaptive_fedprox_mnist_alpha0.5_clients10,51,0.987,0.041111956986994845,0.9897,49,1,2,3,5,5
